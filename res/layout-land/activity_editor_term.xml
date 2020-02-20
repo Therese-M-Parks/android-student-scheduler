@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".activities.EditorTermActivity">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_width="match_parent">
+
+        </android.support.v7.widget.Toolbar>
+
+
+        <!--<TextView-->
+        <!--android:id="@+id/tvTerms"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="10dp"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:layout_marginTop="30dp"-->
+        <!--android:text="Term "-->
+        <!--tools:layout_editor_absoluteX="16dp"-->
+        <!--tools:layout_editor_absoluteY="26dp" />-->
+
+        <EditText
+            android:id="@+id/etTermTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_centerHorizontal="true"
+            android:hint="@string/term_title"
+            android:ems="10"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteX="80dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/tvStart"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/tvTerms"-->
+        <!--android:layout_marginStart="10dp"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:layout_marginTop="30dp"-->
+        <!--android:text="Start"-->
+        <!--tools:layout_editor_absoluteX="16dp"-->
+        <!--tools:layout_editor_absoluteY="26dp" />-->
+
+        <EditText
+            android:id="@+id/etStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etTermTitle"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_centerHorizontal="true"
+            android:hint="@string/start_date_hint"
+            android:ems="10"
+            android:inputType="date"
+            tools:layout_editor_absoluteX="80dp"
+            tools:layout_editor_absoluteY="75dp" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/tvEnd"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/tvStart"-->
+        <!--android:layout_marginStart="10dp"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:layout_marginTop="30dp"-->
+        <!--android:text="End  "-->
+        <!--tools:layout_editor_absoluteX="16dp"-->
+        <!--tools:layout_editor_absoluteY="26dp" />-->
+
+        <EditText
+            android:id="@+id/etEnd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="150dp"
+            android:hint="@string/end_date_hint"
+            android:ems="10"
+            android:inputType="date"
+            tools:layout_editor_absoluteX="80dp"
+            tools:layout_editor_absoluteY="136dp" />
+
+        <TextView
+            android:id="@+id/title_of_course_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:text="@string/title_of_courses_list"
+            android:layout_below="@+id/etEnd"
+            android:layout_marginStart="30dp" />
+
+
+        <ListView
+            android:id="@+id/courses_list"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:fastScrollEnabled="true"
+            android:fastScrollAlwaysVisible="true"
+            android:layout_marginBottom="50dp"
+            android:layout_below="@+id/title_of_course_list" />
+
+    </RelativeLayout>
+</ScrollView>

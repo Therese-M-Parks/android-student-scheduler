@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app ="http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools"
+    tools:context = ".activities.EditorCourseActivity">
+    <item
+        android:id="@+id/action_extra_notes"
+        android:title="Extra Notes"
+        android:orderInCategory="101"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/action_delete"
+        android:title="Delete"
+        android:icon="@drawable/action_delete"
+        android:orderInCategory="102"
+        app:showAsAction="always"/>
+
+</menu>

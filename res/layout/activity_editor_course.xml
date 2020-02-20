@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".activities.EditorCourseActivity">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_width="match_parent">
+
+        </android.support.v7.widget.Toolbar>
+
+
+        <!--Course Title-->
+
+        <EditText
+            android:id="@+id/etCourseTitle"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            android:hint="@string/edit_course_title"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteX="80dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <!-- Course Start -->
+
+        <EditText
+            android:id="@+id/etCourseStart"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etCourseTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="@string/start_date_hint"
+            android:inputType="date"
+            tools:layout_editor_absoluteX="80dp"
+            tools:layout_editor_absoluteY="75dp" />
+
+        <!-- alarm for Course Start -->
+        <TextView
+            android:id="@+id/tvCourseStartTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etCourseStart"
+            android:layout_marginStart="80dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/notify_me_text_hint"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="26dp" />
+
+        <CheckBox
+            android:id="@+id/setCourseStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etCourseStart"
+            android:layout_alignBaseline="@+id/tvCourseStartTitle"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="188dp"
+            android:layout_marginRight="188dp" />
+
+        <!--Course End-->
+
+
+        <EditText
+            android:id="@+id/etCourseEnd"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etCourseStart"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="44dp"
+            android:ems="10"
+            android:hint="@string/end_date_hint"
+            android:inputType="date"
+            tools:layout_editor_absoluteX="80dp"
+            tools:layout_editor_absoluteY="75dp" />
+
+        <!-- alarm for Course End -->
+
+        <!-- alarm for Course Start -->
+        <TextView
+            android:id="@+id/tvCourseEndTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etCourseEnd"
+            android:layout_marginStart="80dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="9dp"
+            android:text="@string/notify_me_text_hint" />
+
+        <CheckBox
+            android:id="@+id/setCourseEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etCourseEnd"
+            android:layout_alignBaseline="@+id/tvCourseEndTitle"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="189dp"
+            android:layout_marginRight="189dp" />
+
+
+        <EditText
+            android:id="@+id/etStatusAuto"
+            android:layout_width="350dp"
+            android:layout_height="41dp"
+            android:layout_below="@id/etCourseEnd"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="277dp"
+            android:ems="10"
+            android:hint="@string/status_text_hint"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            tools:layout_editor_absoluteX="80dp"
+            tools:layout_editor_absoluteY="136dp" />
+
+
+        <Button
+            android:id="@+id/add_assessment_button"
+            android:layout_width="122dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/etStatusAuto"
+            android:layout_alignEnd="@+id/tvCourseStartTitle"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="-27dp"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="#FFF"
+            android:text="@string/add_assessment_btn"
+            android:textSize="12sp"
+            android:layout_marginRight="-27dp"
+            android:layout_alignRight="@+id/tvCourseStartTitle" />
+
+        <Button
+            android:id="@+id/add_mentor_button"
+            android:layout_width="109dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/etStatusAuto"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="64dp"
+            android:layout_marginRight="64dp"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="#FFF"
+            android:text="@string/add_mentor_btn"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/title_of_assessment_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etCourseEnd"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="172dp"
+            android:text="@string/assessment_title"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp" />
+
+        <!-- button to the right of title-->
+
+
+        <ListView
+            android:id="@+id/assessment_list"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/title_of_assessment_list"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="5dp"
+            android:fastScrollEnabled="true"
+            android:fastScrollAlwaysVisible="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_alignParentLeft="true" />
+
+        <!--Mentor List -->
+
+        <TextView
+            android:id="@+id/title_of_mentor_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/title_of_mentor_list"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/assessment_list"
+            android:layout_marginStart="10dp" />
+
+        <!-- button to the right of title-->
+
+
+
+        <ListView
+            android:id="@+id/mentor_list"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            android:fastScrollEnabled="true"
+            android:fastScrollAlwaysVisible="true"
+            android:layout_below="@+id/title_of_mentor_list" />
+
+
+        <!-- Course Description -->
+
+        <TextView
+            android:id="@+id/tvDescriptionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mentor_list"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="62dp"
+            android:text="@string/description_text" />
+
+        <EditText
+            android:id="@+id/etDescriptionText"
+            android:layout_width="269dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvDescriptionTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="100dp"
+            android:text="@string/description_edit_text"
+            android:textSize="18sp"
+            android:textStyle="italic" />
+
+    </RelativeLayout>
+</ScrollView>
