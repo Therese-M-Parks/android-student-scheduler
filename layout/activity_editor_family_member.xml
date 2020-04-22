@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="8dp"
+        android:paddingLeft="8dp"
+        tools:context=".View.Activities.EditorFamilyMember">
+
+        <!--Button to Add Photo from Camera-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/image_informationView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="fitCenter"
+                android:padding="8dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/placeholder_image_for_add_member"
+                android:src="@drawable/person_placeholder"
+                android:background="@drawable/back_ground_accent"/>
+
+            <ImageButton
+                android:id="@+id/button_add_image"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:scaleType="fitCenter"
+                android:padding="8dp"
+                android:textSize="18sp"
+                android:textColor="@color/colorAccent"
+                android:src="@drawable/ic_add_a_photo_white_24dp"
+                android:background="@drawable/back_ground"
+                />
+
+
+        </LinearLayout>
+        <!--Form Fields for New Family Member-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="270dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp">
+
+            <!--First Name Edit Text Field-->
+            <EditText
+                android:id="@+id/et_firstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@drawable/person_placeholder"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="First Name (Required)"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:maxLength="50"/>
+            <!--First Name Edit Text Field-->
+            <EditText
+                android:id="@+id/et_lastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_firstName"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Last Name"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:maxLength="50"/>
+
+            <ImageView
+                android:id="@+id/relation_pic_imageview"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="fitCenter"
+                android:layout_below="@+id/et_lastName"
+                android:padding="8dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/placeholder_image_for_add_member"
+                android:src="@drawable/ic_people_outline_white_24dp"
+                android:background="@drawable/back_ground"/>
+
+            <EditText
+                android:id="@+id/et_showRelationText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="No Current Relation"
+                android:layout_below="@+id/et_lastName"
+                android:layout_toRightOf="@id/relation_pic_imageview"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="8dp"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="normal"
+                android:maxLength="50"/>
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_relationSpinnerLabel"-->
+<!--                android:layout_width="115dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Change Relation : "-->
+<!--                android:layout_below="@+id/tv_showRelationText"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:layout_marginBottom="2dp"-->
+<!--                android:layout_marginRight="8dp"-->
+<!--                android:layout_marginLeft="8dp"/>-->
+
+            <Spinner
+                android:id="@+id/relation_spinner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_showRelationText"
+                android:layout_marginTop="16dp"
+                android:layout_alignLeft="@id/et_showRelationText"
+                android:layout_marginBottom="4dp"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:maxLength="50"/>
+
+            <EditText
+                android:id="@+id/et_phoneNumber1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relation_spinner"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:ems="10"
+                android:hint="@string/phone_1"
+                android:inputType="phone"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:maxLength="50"/>
+
+
+
+            <EditText
+                android:id="@+id/et_phoneNumber2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_phoneNumber1"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:ems="10"
+                android:hint="@string/phone_2"
+                android:inputType="phone"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:maxLength="50"/>
+
+            <!-- Set as Emergency textview-->
+            <TextView
+                android:id="@+id/tvSetAsEmergencyContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_phoneNumber2"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_alignLeft="@id/relation_spinner"
+                android:layout_marginRight="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Set as Emergency Contact"
+                android:textSize="16sp"
+                android:textColor="@color/colorEmergency"
+                android:textStyle="bold"/>
+
+
+            <!--Set as Emergency Checkbox-->
+            <CheckBox
+                android:id="@+id/setEmergencyContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tvSetAsEmergencyContact"
+                android:layout_below="@+id/et_phoneNumber1"
+                android:layout_alignBaseline="@+id/tvSetAsEmergencyContact"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="189dp"
+                android:layout_marginRight="189dp" />
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/email_optional"
+                android:layout_below="@+id/setEmergencyContact"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:inputType="textEmailAddress"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:maxLength="50"/>
+
+            <!--Title and divider for Birthday Section-->
+
+
+<!--            <View-->
+<!--                android:id="@+id/birthday_divider"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:layout_marginBottom="2dp"-->
+<!--                android:layout_below="@+id/tv_birthdaySection"-->
+<!--                android:background="?android:attr/listDivider" />-->
+            <!--Birthday Edit Text Field to to display chosen Birthday-->
+            <ImageView
+                android:id="@+id/birthday_pic_imageview"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="fitCenter"
+                android:layout_below="@+id/et_email"
+                android:padding="8dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/placeholder_image_for_add_member"
+                android:src="@drawable/ic_cake_white_24dp"
+                android:background="@drawable/back_ground"/>
+
+            <EditText
+                android:id="@+id/et_Birthday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_email"
+                android:layout_toRightOf="@+id/birthday_pic_imageview"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:hint="No Current Birthday: "
+                android:inputType="date"
+                android:maxLength="10" />
+
+
+
+            <!--            <CalendarView-->
+            <!--                android:id="@+id/calendarViewForBirthday"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_below="@+id/button_showDatePicker"-->
+            <!--                android:layout_centerHorizontal="true"-->
+            <!--                android:layout_marginStart="10dp"-->
+            <!--                android:layout_marginLeft="10dp"-->
+            <!--                android:layout_marginTop="8dp" />-->
+
+            <!--Birthday Set Alarm Text-->
+
+
+            <TextView
+                android:id="@+id/tvSetReminderForBirthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_Birthday"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_alignLeft="@id/relation_spinner"
+                android:layout_marginRight="8dp"
+                android:text="Remind me 24 hours before."
+                android:textSize="16sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"/>
+
+
+            <!--Birthday Checkbox-->
+            <CheckBox
+                android:id="@+id/setBirthdayAlarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tvSetReminderForBirthday"
+                android:layout_alignBaseline="@+id/tvSetReminderForBirthday"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="189dp"
+                android:layout_marginRight="189dp" />
+
+            <TextView
+                android:id="@+id/tv_birthdaySection"
+                android:layout_width="115dp"
+                android:layout_height="wrap_content"
+                android:text="Change Birthday :"
+                android:layout_below="@+id/tvSetReminderForBirthday"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_alignLeft="@id/relation_spinner"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="normal"
+                android:maxLength="50"/>
+
+            <TextView
+                android:id="@+id/tv_monthSpinnerlabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Month : "
+                android:layout_below="@+id/tv_birthdaySection"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_alignLeft="@id/relation_spinner"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:maxLength="50"/>
+
+            <Spinner
+                android:id="@+id/month_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_birthdaySection"
+                android:layout_toRightOf="@id/tv_monthSpinnerlabel"
+                android:layout_toEndOf="@id/tv_birthdaySection"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="4dp"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:maxLength="50"/>
+
+            <TextView
+                android:id="@+id/tv_daySpinnerlabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Day : "
+                android:layout_below="@+id/tv_monthSpinnerlabel"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_alignLeft="@id/relation_spinner"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:maxLength="50"/>
+
+            <Spinner
+                android:id="@+id/day_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/month_spinner"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@id/tv_daySpinnerlabel"
+                android:layout_toEndOf="@id/tv_birthdaySection"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="4dp"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:maxLength="50"/>
+
+            <TextView
+                android:id="@+id/tv_yearSpinnerlabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Year : "
+                android:layout_below="@+id/tv_daySpinnerlabel"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_alignLeft="@id/relation_spinner"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:maxLength="50"/>
+
+            <Spinner
+                android:id="@+id/year_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/day_spinner"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@id/tv_yearSpinnerlabel"
+                android:layout_toEndOf="@id/tv_birthdaySection"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="4dp"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:maxLength="50"/>
+
+
+
+<!--             &lt;!&ndash;Title and divider for Address Section&ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:id="@+id/tv_addressSection"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/address_optional"-->
+<!--                android:layout_below="@+id/tvSetReminderForBirthday"-->
+<!--                android:layout_marginTop="32dp"-->
+<!--                android:layout_marginBottom="8dp"-->
+<!--                android:layout_marginLeft="8dp"-->
+<!--                android:layout_marginRight="8dp"-->
+<!--                />-->
+
+<!--            <View-->
+<!--                android:id="@+id/divider"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:layout_marginBottom="8dp"-->
+<!--                android:layout_below="@+id/tv_addressSection"-->
+<!--                android:background="?android:attr/listDivider" />-->
+
+
+<!--            <EditText-->
+<!--                android:id="@+id/et_addressLine_1"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:hint="@string/street_1"-->
+<!--                android:layout_below="@+id/tv_addressSection"-->
+<!--                android:layout_marginBottom="4dp"-->
+<!--                android:layout_marginTop="32dp"-->
+<!--                android:ems="10"-->
+<!--                android:inputType="textPostalAddress" />-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/et_addressLine_2"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:hint="@string/street_2"-->
+<!--                android:layout_below="@+id/et_addressLine_1"-->
+<!--                android:layout_marginBottom="4dp"-->
+<!--                android:ems="10"-->
+<!--                android:inputType="textPostalAddress" />-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/et_city"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:hint="@string/city"-->
+<!--                android:layout_below="@+id/et_addressLine_2"-->
+<!--                android:layout_marginBottom="4dp"-->
+<!--                android:ems="10"-->
+<!--                android:inputType="textPostalAddress" />-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/et_state"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:hint="@string/state"-->
+<!--                android:layout_below="@+id/et_city"-->
+<!--                android:layout_marginBottom="4dp"-->
+<!--                android:ems="10"-->
+<!--                android:inputType="textPostalAddress" />-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/et_postalCode"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/et_state"-->
+<!--                android:layout_marginBottom="4dp"-->
+<!--                android:hint="@string/zip"-->
+<!--                android:ems="10"-->
+<!--                android:inputType="textPostalAddress" />-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/et_country"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:hint="@string/us"-->
+<!--                android:layout_below="@+id/et_postalCode"-->
+<!--                android:ems="10"-->
+<!--                android:inputType="textPostalAddress" />-->
+
+
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="8dp"
+                android:layout_below="@+id/year_spinner"
+                android:background="?android:attr/listDivider" />
+
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider2"
+                android:text="Description"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:maxLength="50"/>
+
+            <EditText
+                android:id="@+id/et_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_description"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:hint="@string/et_description_hint"
+                android:textSize="16sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="normal"
+                android:maxLength="50"/>
+
+            <Button
+                android:id="@+id/button_add_notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Notes for Family Member"
+                android:layout_below="@id/et_description"
+                android:onClick="showDatePickerDialog"
+                android:textSize="20sp"
+                android:textColor="#FFFF"
+                android:background="@color/colorPrimary"
+                android:textStyle="bold"
+                android:maxLength="50"
+                />
+        </RelativeLayout>
+
+
+        <!--       <EditText-->
+        <!--           android:id="@+id/etFamilyRelationship"-->
+        <!--           android:layout_width="match_parent"-->
+        <!--           android:layout_height="wrap_content"-->
+        <!--           android:layout_centerHorizontal="true"-->
+        <!--           android:layout_marginStart="40dp"-->
+        <!--           android:layout_marginLeft="40dp"-->
+        <!--           android:layout_marginTop="20dp"-->
+        <!--           android:layout_marginRight="40dp"-->
+        <!--           android:ems="10"-->
+        <!--           android:hint="Brother"-->
+        <!--           android:inputType="textPersonName"-->
+        <!--           tools:layout_editor_absoluteX="80dp"-->
+        <!--           tools:layout_editor_absoluteY="16dp" />-->
+
+
+    </RelativeLayout>
+</ScrollView>

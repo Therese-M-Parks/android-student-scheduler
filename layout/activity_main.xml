@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <a target="_blank" href="https://icons8.com/icons/set/family">
+              Family icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>-->
+<!--a target="_blank" href="https://icons8.com/icons/set/groups">User Groups icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>-->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".View.Activities.MainActivity">
+        <!--Button to Add Photo from Camera-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/image_mainActivity"
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:scaleType="fitCenter"
+                android:padding="32dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="Image of Family"
+                android:src="@drawable/icons8_user_groups_100"
+                android:background="@drawable/back_ground"/>
+
+
+        </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="190dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp">
+
+        <Button
+            android:id="@+id/acronym_mainActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:text="FIT"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textSize="75sp"
+            android:background="#FFFF"/>
+
+
+<!--        <ImageView-->
+<!--            android:id="@+id/family_pic"-->
+<!--            android:layout_width="80dp"-->
+<!--            android:layout_height="80dp"-->
+<!--            android:layout_marginLeft="25dp"-->
+<!--            android:layout_marginTop="25dp"-->
+<!--            android:layout_marginRight="5dp"-->
+<!--            android:background="@drawable/back_ground"-->
+<!--            android:padding="8dp"-->
+<!--            android:scaleType="fitCenter"-->
+<!--            android:src="@drawable/ic_people_outline_white_24dp" />-->
+
+        <Button
+            android:id="@+id/button_listOfAllFamilyMembers"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_below="@id/acronym_mainActivity"
+            android:text="Access Family"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="#FFFF"
+            android:textStyle="normal"
+            android:textSize="20sp"
+            tools:text="Access Family" />
+
+        <Button
+            android:id="@+id/button_MoreChoices"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/button_listOfAllFamilyMembers"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:text="@string/more_choices"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+            tools:text="More Choices" />
+
+        <Button
+            android:id="@+id/button_Emergency"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/button_MoreChoices"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:text="@string/emergency"
+            android:background="@color/colorEmergency"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+            tools:text="Emergency" />
+
+    </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:hint="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="8dp"
+        android:paddingLeft="8dp"
+        tools:context=".View.Activities.QuickAccess">
+
+        <!--Form Fields for New Family Member-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp">
+            <!--Fam Member Details Button-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+            <!--First Name Edit Text Field-->
+<!--            <EditText-->
+<!--                android:id="@+id/et_firstName"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="4dp"-->
+<!--                android:layout_marginBottom="4dp"-->
+<!--                android:ems="10"-->
+<!--                android:inputType="textPersonName"-->
+<!--                android:hint="First Name"-->
+<!--                android:maxLength="25"/>-->
+                <EditText
+                    android:id="@+id/et_fullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="Full Name"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    android:maxLength="50"/>
+            <!--RelationEdit Text Field-->
+            <EditText
+                android:id="@+id/et_Relation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_fullName"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Auto-Filled Relation"
+                android:textSize="20sp"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:maxLength="20"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="399dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="32dp">
+
+                    <EditText
+                        android:id="@+id/et_phoneNumber1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="4dp"
+                        android:digits="1234567890"
+                        android:ems="14"
+                        android:hint="Primary Phone"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:inputType="phone"
+                        android:maxLength="14" />
+
+                    <ImageButton
+                        android:id="@+id/button_call"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@id/et_phoneNumber1"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/back_ground_primary_green"
+                        android:src="@drawable/ic_call" />
+
+
+                    <EditText
+                        android:id="@+id/et_phoneNumber2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/button_call"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="4dp"
+                        android:digits="1234567890"
+                        android:ems="14"
+                        android:hint="Secondary Phone"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold"
+                        android:inputType="phone"
+                        android:maxLength="14" />
+
+                    <ImageButton
+                        android:id="@+id/button_call2"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/et_phoneNumber2"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/back_ground"
+                        android:src="@drawable/ic_call" />
+
+                    <EditText
+                        android:id="@+id/et_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/button_call2"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="4dp"
+                        android:ems="10"
+                        android:hint="Auto-Filled Email"
+                        android:inputType="textEmailAddress"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="bold"
+                        android:maxLength="30"/>
+
+                    <ImageButton
+                        android:id="@+id/button_noteMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@id/et_email"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/back_ground_accent"
+                        android:src="@drawable/ic_email_white_24dp" />
+
+                </RelativeLayout>
+<!--                            <Button-->
+<!--                                android:id="@+id/button_detailedInformation"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="60dp"-->
+<!--                                android:layout_marginTop="2dp"-->
+<!--                                android:layout_marginBottom="16dp"-->
+<!--                                android:text="View Details"-->
+<!--                                android:background="#FFF"-->
+<!--                                android:textSize="18sp"-->
+<!--                                android:textColor="@color/colorPrimaryDark"-->
+<!--                                android:textStyle="bold"-->
+<!--                                tools:text="More Details" />-->
+            </LinearLayout>
+
+<!--            <View-->
+<!--                android:id="@+id/birthday_divider"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_marginTop="2dp"-->
+<!--                android:layout_marginBottom="8dp"-->
+<!--                android:layout_below="@+id/tv_birthdaySection"-->
+<!--                android:background="?android:attr/listDivider" />-->
+
+<!--            &lt;!&ndash;Birthday Element&ndash;&gt;-->
+<!--            <EditText-->
+<!--                android:id="@+id/etBirthday"-->
+<!--                android:layout_width="350dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/birthday_divider"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:ems="10"-->
+<!--                android:hint="@string/date_hint"-->
+<!--                android:inputType="date" />-->
+
+<!--            &lt;!&ndash;Birthday Set Alarm Text&ndash;&gt;-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvSetReminderForBirthday"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/etBirthday"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:layout_marginBottom="8dp"-->
+<!--                android:layout_marginLeft="8dp"-->
+<!--                android:layout_marginRight="8dp"-->
+<!--                android:text="Remind me 24 hours before." />-->
+
+<!--            &lt;!&ndash;Birthday Checkbox&ndash;&gt;-->
+<!--            <CheckBox-->
+<!--                android:id="@+id/setBirthdayAlarm"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_toRightOf="@+id/tvSetReminderForBirthday"-->
+<!--                android:layout_alignBaseline="@+id/tvSetReminderForBirthday"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginEnd="189dp"-->
+<!--                android:layout_marginRight="189dp" />-->
+
+<!--            &lt;!&ndash;Title and divider for Address Section&ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:id="@+id/tv_addressSection"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/address_optional"-->
+<!--                android:layout_below="@+id/tvSetReminderForBirthday"-->
+<!--                android:layout_marginTop="32dp"-->
+<!--                android:layout_marginBottom="8dp"-->
+<!--                android:layout_marginLeft="8dp"-->
+<!--                android:layout_marginRight="8dp"-->
+<!--                />-->
+
+<!--            <View-->
+<!--                android:id="@+id/divider"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:layout_marginBottom="8dp"-->
+<!--                android:layout_below="@+id/tv_addressSection"-->
+<!--                android:background="?android:attr/listDivider" />-->
+
+
+<!--            <EditText-->
+<!--                android:id="@+id/et_addressLine_1"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:hint="@string/street_1"-->
+<!--                android:layout_below="@+id/tv_addressSection"-->
+<!--                android:layout_marginBottom="4dp"-->
+<!--                android:layout_marginTop="32dp"-->
+<!--                android:ems="10"-->
+<!--                android:inputType="textPostalAddress" />-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/et_addressLine_2"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:hint="@string/street_2"-->
+<!--                android:layout_below="@+id/et_addressLine_1"-->
+<!--                android:layout_marginBottom="4dp"-->
+<!--                android:ems="10"-->
+<!--                android:inputType="textPostalAddress" />-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/et_city"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:hint="@string/city"-->
+<!--                android:layout_below="@+id/et_addressLine_2"-->
+<!--                android:layout_marginBottom="4dp"-->
+<!--                android:ems="10"-->
+<!--                android:inputType="textPostalAddress" />-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/et_state"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:hint="@string/state"-->
+<!--                android:layout_below="@+id/et_city"-->
+<!--                android:layout_marginBottom="4dp"-->
+<!--                android:ems="10"-->
+<!--                android:inputType="textPostalAddress" />-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/et_postalCode"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/et_state"-->
+<!--                android:layout_marginBottom="4dp"-->
+<!--                android:hint="@string/zip"-->
+<!--                android:ems="10"-->
+<!--                android:inputType="textPostalAddress" />-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/et_country"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:hint="@string/us"-->
+<!--                android:layout_below="@+id/et_postalCode"-->
+<!--                android:ems="10"-->
+<!--                android:inputType="textPostalAddress" />-->
+
+
+
+<!--            <View-->
+<!--                android:id="@+id/divider2"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_marginTop="32dp"-->
+<!--                android:layout_marginBottom="8dp"-->
+<!--                android:layout_below="@+id/et_country"-->
+<!--                android:background="?android:attr/listDivider" />-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/et_notes"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/divider2"-->
+<!--                android:ems="10"-->
+<!--                android:gravity="start|top"-->
+<!--                android:inputType="textMultiLine"-->
+<!--                android:hint="@string/notes_optional"/>-->
+
+<!--            <Button-->
+<!--                android:id="@+id/button_cancel"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/et_notes"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:text="Cancel" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/button_save"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/et_notes"-->
+<!--                android:layout_toRightOf="@+id/button_cancel"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:layout_marginStart="50dp"-->
+<!--                android:layout_marginLeft="50dp"-->
+<!--                android:text="Save" />-->
+
+
+        </RelativeLayout>
+
+
+        <!--       <EditText-->
+        <!--           android:id="@+id/etFamilyRelationship"-->
+        <!--           android:layout_width="match_parent"-->
+        <!--           android:layout_height="wrap_content"-->
+        <!--           android:layout_centerHorizontal="true"-->
+        <!--           android:layout_marginStart="40dp"-->
+        <!--           android:layout_marginLeft="40dp"-->
+        <!--           android:layout_marginTop="20dp"-->
+        <!--           android:layout_marginRight="40dp"-->
+        <!--           android:ems="10"-->
+        <!--           android:hint="Brother"-->
+        <!--           android:inputType="textPersonName"-->
+        <!--           tools:layout_editor_absoluteX="80dp"-->
+        <!--           tools:layout_editor_absoluteY="16dp" />-->
+
+
+    </RelativeLayout>
+</ScrollView>
+

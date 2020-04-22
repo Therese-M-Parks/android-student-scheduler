@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".View.Activities.MainActivity">
+
+        <ImageView
+            android:id="@+id/family_pic"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitCenter"
+            android:padding="8dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/ic_people_outline_white_24dp"
+            android:background="@drawable/back_ground"/>
+
+        <Button
+        android:id="@+id/button_FamilyByGroup"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_toRightOf="@id/family_pic"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="25dp"
+        android:text="@string/family_groups"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="#FFF"
+            android:textSize="20sp"
+        tools:text="Family Groups" />
+
+        <ImageView
+            android:id="@+id/birthday_pic2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitCenter"
+            android:layout_below="@+id/family_pic"
+            android:padding="8dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/ic_cake_white_24dp"
+            android:background="@drawable/back_ground"/>
+        <Button
+            android:id="@+id/button_FamilyBirthdays"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/button_FamilyByGroup"
+            android:layout_toRightOf="@id/family_pic"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="25dp"
+            android:text="@string/family_birthdays"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+            tools:text="Family Birthdays" />
+
+        <ImageView
+            android:id="@+id/birthday_pic3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitCenter"
+            android:layout_below="@+id/birthday_pic2"
+            android:padding="8dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/ic_note_white_24dp"
+            android:background="@drawable/back_ground"/>
+
+        <Button
+            android:id="@+id/button_FamilyNotes"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/button_FamilyBirthdays"
+            android:layout_toRightOf="@id/birthday_pic3"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="25dp"
+            android:text="Family Notes"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+            tools:text="Family Notes" />
+
+        <ImageView
+            android:id="@+id/birthday_pic4"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitCenter"
+            android:layout_below="@+id/birthday_pic3"
+            android:padding="8dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/ic_settings_white_24dp"
+            android:background="@drawable/back_ground"/>
+        <Button
+            android:id="@+id/button_Settings"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/button_FamilyNotes"
+            android:layout_toRightOf="@id/birthday_pic3"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="25dp"
+            android:text="@string/settings"
+            android:background="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            android:textColor="#FFF"/>
+    </RelativeLayout>
+</ScrollView>

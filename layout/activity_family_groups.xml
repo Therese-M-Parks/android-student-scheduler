@@ -1,0 +1,128 @@
+<!-- icons 8 source links:
+<a target="_blank" href="https://icons8.com/icons/set/parenting">Parenting icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icons/set/binoculars">Binoculars icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icons/set/law">Law icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icons/set/friends">Friends icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>-->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".View.Activities.FamilyGroups">
+
+        <ImageView
+            android:id="@+id/immediate_pic"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitCenter"
+            android:padding="8dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/icons8_parenting_50"
+            android:background="@drawable/back_ground_accent"/>
+
+        <Button
+            android:id="@+id/button_immediate_family"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_toRightOf="@id/immediate_pic"
+            android:text="Immediate Family"
+            android:background="@color/colorPrimary"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+            tools:text="Immediate Family" />
+
+        <ImageView
+            android:id="@+id/distant_pic"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitCenter"
+            android:padding="8dp"
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/immediate_pic"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/icons8_binoculars_50"
+            android:background="@drawable/back_ground_accent"/>
+
+        <Button
+            android:id="@+id/button_distant_family"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/button_immediate_family"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_toRightOf="@id/distant_pic"
+            android:text="Distant Family"
+            android:background="@color/colorPrimary"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+            tools:text="Distant Family" />
+
+        <ImageView
+            android:id="@+id/inlaw_pic"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitCenter"
+            android:padding="8dp"
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/distant_pic"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/icons8_law_50"
+            android:background="@drawable/back_ground_accent"/>
+
+        <Button
+            android:id="@+id/button_family_in_law"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/button_distant_family"
+            android:layout_toRightOf="@id/inlaw_pic"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:text="Family-In-Law"
+            android:background="@color/colorPrimary"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+            tools:text="Family-In-Law" />
+
+        <ImageView
+            android:id="@+id/other_pic"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitCenter"
+            android:padding="8dp"
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/inlaw_pic"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/icons8_friends_50"
+            android:background="@drawable/back_ground_accent"/>
+
+        <Button
+            android:id="@+id/button_other_family"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/button_family_in_law"
+            android:layout_toRightOf="@id/other_pic"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:text="Other Family"
+            android:background="@color/colorPrimary"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+            tools:text="Other Family" />
+
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

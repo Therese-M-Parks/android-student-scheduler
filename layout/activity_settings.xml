@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:hint="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="8dp"
+        android:paddingLeft="8dp"
+        tools:context=".View.Activities.Settings">
+
+        <Button
+            android:id="@+id/button_MoreChoices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:text="Setting Choices are not yet available in this app version."
+            tools:text="Setting Choices are not yet available in this app version."
+            android:background="@color/colorPrimary"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+          />
+    </RelativeLayout>
+</ScrollView>
